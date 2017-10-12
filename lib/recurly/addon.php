@@ -56,11 +56,13 @@ class Recurly_Addon extends Recurly_Resource
   protected function getNodeName() {
     return 'add_on';
   }
-  protected function getWriteableAttributes() {
-    return array(
-      'add_on_code', 'name', 'display_quantity', 'default_quantity',
-      'unit_amount_in_cents', 'accounting_code', 'tax_code',
-      'measured_unit_id', 'usage_type', 'add_on_type', 'revenue_schedule_type'
-    );
-  }
+
+    protected function getWriteableAttributes() {
+        return array(
+            'add_on_code', 'name', 'display_quantity', 'default_quantity',
+            'unit_amount_in_cents', 'accounting_code', 'tax_code',
+            'measured_unit_id', 'usage_type', 'add_on_type', 'revenue_schedule_type',
+            'optional', 'display_quantity_on_hosted_page'
+        );
+    }
 }
